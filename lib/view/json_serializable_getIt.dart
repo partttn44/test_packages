@@ -18,7 +18,7 @@ class _JsonSerializableGetItScreenState
   List<Food> foods = [];
   final apiService = getIt<TestApiService>();
   fecthData() async {
-    final FoodDataModel data = await apiService.fetchData();
+    await apiService.fetchData();
     setState(() {
       foods.clear();
     });
